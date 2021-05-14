@@ -45,10 +45,10 @@ function gradeQuiz(candidateAnswers) {
   // }
   let grade = numberOfCorrect / questions.length * 100;
 if (grade>=80){
-  console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${correctAnswers.length} responses correct) <<<`)
+  console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${questions.length} responses correct) <<<`)
   console.log('>>> Status: PASSED <<<');
   } else {
-    console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${correctAnswers.length} reponses correct) <<<`)
+    console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${questions.length} reponses correct) <<<`)
     console.log('>>> Status: FAILED <<<\n');
   }
 
