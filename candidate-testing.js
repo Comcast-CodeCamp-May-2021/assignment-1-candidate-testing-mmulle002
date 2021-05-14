@@ -31,7 +31,8 @@ function askQuestion() {
 function gradeQuiz(candidateAnswers) {
   console.log(`Candidate Name: ${candidateName}`);
   for (let i = 0; i < candidateAnswers.length; i++) {
-    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) { numberOfCorrect = numberOfCorrect+1 //to get correct answer total//
+    if (correctAnswers[i].toLowerCase() === candidateAnswers[i].toLowerCase()) { 
+      numberOfCorrect = numberOfCorrect+1 //to get correct answer total//
      }
     console.log(`${i+1} ${questions[i]}`);
     console.log(`Your Answer: ${candidateAnswers[i]}`);
@@ -43,8 +44,9 @@ function gradeQuiz(candidateAnswers) {
    //else {
      //console.log("Incorrect")
   // }
-  let grade = numberOfCorrect / questions.length * 100;
-if (grade>=80){
+  let grade = (numberOfCorrect / questions.length) * 100;
+
+  if (grade>=80){
   console.log(`>>> Overall Grade: ${grade}% (${numberOfCorrect} of ${questions.length} responses correct) <<<`)
   console.log('>>> Status: PASSED <<<');
   } else {
